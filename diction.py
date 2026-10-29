@@ -18,5 +18,15 @@ best_buy_items = [
         "description": "Latest Apple smartphone with A17 chip and advanced camera system."
     }
 ]
-print(best_buy_items[0]["name"])
-print(best_buy_items[0]["price"])
+def show_items(items):
+    for index, item in enumerate(items):
+        print(index, ":", item["name"])
+
+show_items(best_buy_items)
+
+def choose_item():
+    show_items(best_buy_items)
+    x = int(input("Which item number do you want to buy? "))
+    print(best_buy_items[x])
+
+choose_item()
