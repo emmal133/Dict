@@ -49,4 +49,4 @@ while continue_shopping=="yes":
     choose_item()
     continue_shopping = input("Do you want to continue shopping? (yes/no): ")
 if continue_shopping=="no":
-    print(continue_shopping)
+    print[]
