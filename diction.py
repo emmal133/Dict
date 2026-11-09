@@ -29,4 +29,3 @@ def choose_item():
     x = int(input("Which item number do you want to buy? "))
     print(best_buy_items[x])
 
-choose_item()

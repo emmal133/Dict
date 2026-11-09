@@ -43,10 +43,10 @@ def choose_item():
     show_items(chipotle_items)
     x = int(input("Which item number do you want to buy? "))
     print(chipotle_items[x]["name"])
-
+cart=[]
 continue_shopping = input("Do you want to buy something? (yes/no): ")
 while continue_shopping=="yes":
     choose_item()
     continue_shopping = input("Do you want to continue shopping? (yes/no): ")
 if continue_shopping=="no":
-    print[]
+    print(cart.append(continue_shopping))
