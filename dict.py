@@ -35,22 +35,26 @@ chipotle_items=[
         "description": "grilled sofritas, rice, and toppings of your choice"
     }
 ]
-total=(0)
+total = 0
+
+
 def show_items(items):
     for index, item in enumerate(items):
         print(index, ":", item["name"])
-
 def choose_item():
     show_items(chipotle_items)
     x = int(input("Which item number do you want to buy? "))
     return chipotle_items[x]["name"]
-cart=[]
+cart = []
 continue_shopping = input("Do you want to buy something? (yes/no): ")
-while continue_shopping=="yes":
+while continue_shopping == "yes":
     want = choose_item()
     cart.append(want)
-    total += next(item["price"] 
-    for item in chipotle_items if item["name"] == want)
+    for item in chipotle_items:
+        if item["name"] == want:
+            total += item["price"]
+            break
     continue_shopping = input("Do you want to continue shopping? (yes/no): ")
-if continue_shopping=="no":
+if continue_shopping == "no":
     print(cart)
+    print(total)
