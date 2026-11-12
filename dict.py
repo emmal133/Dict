@@ -36,8 +36,6 @@ chipotle_items=[
     }
 ]
 total = 0
-
-
 def show_items(items):
     for index, item in enumerate(items):
         print(index, ":", item["name"])
